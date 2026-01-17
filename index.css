@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+}
+.etchSketchBlock {
+  padding: 20px;
+  border: 2px solid black;
+}
+
+.etchSketchBlockRow {
+  display: flex;
+}

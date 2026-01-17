@@ -4,8 +4,8 @@ let div = "";
 
 //creates 16x16 grid of blocks
 for (let i = 0; i < 16; i++) {
-  div += `<span>Hi </span>`;
+  div += `<div class="etchSketchBlock"></div>`;
 }
 for (let i = 0; i < 16; i++) {
-  container.innerHTML += `<div>${div}</div>`;
+  container.innerHTML += `<div class="etchSketchBlockRow">${div}</div>`;
 }
