@@ -7,6 +7,10 @@
   border: 2px solid black;
 }
 
+.etchSketchBlock:hover {
+  background-color: black;
+}
+
 .etchSketchBlockRow {
   display: flex;
 }

@@ -9,3 +9,13 @@ for (let i = 0; i < 16; i++) {
 for (let i = 0; i < 16; i++) {
   container.innerHTML += `<div class="etchSketchBlockRow">${div}</div>`;
 }
+
+// on hover, change background color to black
+
+const etchSketchBlocks = document.querySelectorAll(".etchSketchBlock");
+console.log(etchSketchBlocks);
+etchSketchBlocks.forEach((block) => {
+  block.addEventListener("mouseover", () => {
+    block.style.backgroundColor = "black";
+  });
+});
