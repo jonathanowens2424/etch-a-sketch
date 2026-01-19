@@ -3,6 +3,7 @@ const changeGridSizeBtn = document.querySelector("#changeGridSizeBtn");
 const resetGridBtn = document.querySelector("#resetGrid");
 const toggleColorBtn = document.querySelector("#toggleColor");
 import resetGrid from "./util/resetGrid.js";
+import generateRandomColor from "./util/generateRandomColor.js";
 
 let currentNumber = 16;
 let isColorOn = false;
@@ -24,7 +25,7 @@ export function generateGrid(number) {
       if (!isColorOn) {
         block.style.backgroundColor = "black";
       } else {
-        block.style.backgroundColor = "#893409";
+        block.style.backgroundColor = generateRandomColor();
       }
     });
   });
