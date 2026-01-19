@@ -1,7 +1,9 @@
 const container = document.querySelector("#container");
 const changeGridSizeBtn = document.querySelector("#changeGridSizeBtn");
+const resetGridBtn = document.querySelector("#resetGrid");
+let currentNumber = 16;
 
-function generateGrid(number) {
+export function generateGrid(number) {
   let gridRow = "";
   for (let i = 0; i < number; i++) {
     gridRow += `<div class="etchSketchBlock"></div>`;
@@ -30,8 +32,13 @@ changeGridSizeBtn.addEventListener("click", () => {
     alert("Your number is too large.");
   } else if (sizeNumber > 0 && !isNaN(sizeNumber) && sizeNumber !== null) {
     alert("Generating grid...");
+    currentNumber = sizeNumber;
     generateGrid(sizeNumber);
   } else {
     alert("Please give a positive number.");
   }
+});
+
+resetGridBtn.addEventListener("click", () => {
+  console.log("Reset button clicked!");
 });
