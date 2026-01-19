@@ -1,6 +1,7 @@
 const container = document.querySelector("#container");
 const changeGridSizeBtn = document.querySelector("#changeGridSizeBtn");
 const resetGridBtn = document.querySelector("#resetGrid");
+import resetGrid from "./util/resetGrid.js";
 let currentNumber = 16;
 
 export function generateGrid(number) {
@@ -31,7 +32,6 @@ changeGridSizeBtn.addEventListener("click", () => {
   if (sizeNumber > 100) {
     alert("Your number is too large.");
   } else if (sizeNumber > 0 && !isNaN(sizeNumber) && sizeNumber !== null) {
-    alert("Generating grid...");
     currentNumber = sizeNumber;
     generateGrid(sizeNumber);
   } else {
@@ -40,5 +40,6 @@ changeGridSizeBtn.addEventListener("click", () => {
 });
 
 resetGridBtn.addEventListener("click", () => {
-  console.log("Reset button clicked!");
+  console.log(currentNumber);
+  resetGrid(currentNumber);
 });

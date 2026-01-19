@@ -3,8 +3,8 @@
   padding: 0px;
 }
 .etchSketchBlock {
-  padding: 20px;
-  border: 2px solid black;
+  padding: 5px;
+  border: 1px solid black;
 }
 
 .etchSketchBlock:hover {
