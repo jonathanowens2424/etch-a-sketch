@@ -1,8 +1,11 @@
 const container = document.querySelector("#container");
 const changeGridSizeBtn = document.querySelector("#changeGridSizeBtn");
 const resetGridBtn = document.querySelector("#resetGrid");
+const toggleColorBtn = document.querySelector("#toggleColor");
 import resetGrid from "./util/resetGrid.js";
+
 let currentNumber = 16;
+let isColorOn = false;
 
 export function generateGrid(number) {
   let gridRow = "";
@@ -18,7 +21,11 @@ export function generateGrid(number) {
   console.log(etchSketchBlocks);
   etchSketchBlocks.forEach((block) => {
     block.addEventListener("mouseover", () => {
-      block.style.backgroundColor = "black";
+      if (!isColorOn) {
+        block.style.backgroundColor = "black";
+      } else {
+        block.style.backgroundColor = "#893409";
+      }
     });
   });
 }
@@ -42,4 +49,8 @@ changeGridSizeBtn.addEventListener("click", () => {
 resetGridBtn.addEventListener("click", () => {
   console.log(currentNumber);
   resetGrid(currentNumber);
+});
+
+toggleColorBtn.addEventListener("click", () => {
+  isColorOn = !isColorOn;
 });
