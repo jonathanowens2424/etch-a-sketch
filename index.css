@@ -11,6 +11,11 @@
   background-color: black;
 }
 
-.etchSketchBlockRow {
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
   display: flex;
 }
